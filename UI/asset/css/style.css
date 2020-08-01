@@ -1,0 +1,61 @@
+body{
+    background-color:black;
+}
+
+.navbar-brand{
+    color: white;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+.navbar-brand span{
+    color: orangered;
+}
+
+.btn-dark{
+    background-color: orangered;
+    border-color: orangered;
+}
+
+.btn-dark:hover{
+    background-color: orange;
+    border-color: orange;
+}
+
+.btn-dark:enabled{
+    background-color: orangered;
+    border-color: orangered;
+}
+
+
+
+.martop{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.btn-secondary{
+    background-color: #de0707;
+    color: white;
+}
+
+.btn-secondary:hover{
+    background-color: #de0709;
+    color: white;
+}
+
+.btn-secondary:enabled{
+    background-color: #de0707;
+    color: white;
+}
+
+.card img{
+    height: 350px;
+    width: 100%;
+}
+
+
+.img-thumbnail{
+    background-color: black;
+    border: 0;
+}
