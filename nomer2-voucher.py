@@ -1,20 +1,38 @@
 def main():
-    JumlahUang = int(input("Jumlah Uang kaka : "))
-    JumlahDibayar = int(input("Jumlah Yang Harus di Bayar kaka : "))
-    diskon = 0
-    cek(JumlahUang,JumlahDibayar,diskon)
+    JumlahUang = int(input("Uang kaka Rp.: "))
+    cek(JumlahUang)
     
-def cek(JumlahUang,JumlahDibayar,diskon):
+def cek(JumlahUang):
     if JumlahUang >= 80000:
-        lebihdelapanpuluh(JumlahUang,JumlahDibayar,diskon)
-    else:
-        print('Jumlah Uang Melebihi')
+        JumlahDibayar = int(input("Yang Harus di Bayar kaka Rp. : "))
+        lebihdelapanpuluh(JumlahDibayar,JumlahUang)
+    elif JumlahUang >= 50000:
+        JumlahDibayar = int(input("Yang Harus di Bayar kaka Rp. : "))
+        lebihlimapuluh(JumlahDibayar,JumlahUang)
 
-def lebihdelapanpuluh(JumlahUang,JumlahDibayar,diskon):
+def lebihdelapanpuluh(JumlahDibayar,JumlahUang):
     diskon = 0.30
-    kalkulasidiskon = 80000 / 0.30
-    Hasil = JumlahUang - kalkulasidiskon
-    print('Discount :'  % kalkulasidiskon)
+    kalkulasidiskon = JumlahDibayar * diskon
+    hasil = JumlahDibayar - kalkulasidiskon
+    kembalian = JumlahUang - hasil 
+    print("---HASIL PERHITUNGAN---")
+    print("Diskon : Rp. %s" % diskon)
+    print("Diskon : Rp. %s" % kalkulasidiskon)
+    print("Jumlah Dibayar : Rp. %s" % JumlahDibayar)
+    print("Total Pembayaran  : Rp. %s" % hasil)
+    print("Kembalian  : Rp. %s" % kembalian)
+
+def lebihlimapuluh(JumlahDibayar,JumlahUang):
+    diskon = 0.21
+    kalkulasidiskon = JumlahDibayar * diskon
+    hasil = JumlahDibayar - kalkulasidiskon
+    kembalian = JumlahUang - hasil 
+    print("---HASIL PERHITUNGAN---")
+    print("Diskon : Rp. %s" % diskon)
+    print("Diskon : Rp. %s" % kalkulasidiskon)
+    print("Jumlah Dibayar : Rp. %s" % JumlahDibayar)
+    print("Total Pembayaran  : Rp. %s" % hasil)
+    print("Kembalian  : Rp. %s" % kembalian)
 
 
 main()
